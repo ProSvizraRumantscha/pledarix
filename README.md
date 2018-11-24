@@ -46,5 +46,4 @@ The people behind this project/prototype are:
 * Flurin Bundi
 
 
-# A project initiated and supported by (Pro Svizra Rumantscha)[http://rumantsch.ch]
-
+# A project initiated and supported by [Pro Svizra Rumantscha](http://rumantsch.ch)
