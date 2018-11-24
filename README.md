@@ -2,7 +2,7 @@
 
 *Project started at the [Forum Helveticum Hackathon](https://hack.opendata.ch/event/22), 23./24.11.2018*
 
-Have a look at the [presentation](https://docs.google.com/presentation/d/1iClMrRkEmffKaTM_EM8LHT8cgDvWqXB9_0IR67NUHZM/edit?usp=sharing)!
+Have a look at the [presentation](https://hack.opendata.ch/project/274/star)!
 
 # Idea
 
