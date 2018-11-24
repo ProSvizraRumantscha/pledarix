@@ -13,6 +13,13 @@ $Ergebnis = mysqli_query($colligiaziun, $SQLString);
 
 $field = $Ergebnis->fetch_array();
 
+if (is_null($field)) {
+	$modus = "entschatta";
+	$SQLString = SqlQueryGenerator::generateDeQuery($pled, $direcziun, $modus);
+	$Ergebnis = mysqli_query($colligiaziun, $SQLString);	
+	$field = $Ergebnis->fetch_array();
+}
+
 print json_encode($field); 
 
 ?>
