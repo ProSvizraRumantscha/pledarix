@@ -1,3 +1,9 @@
+-------
+-- Combine the German, French, Italian and English translations into one table
+-------
+
+-- Clean german values
+
 drop temporary table if exists deutsch;
 create temporary table deutsch(
 
@@ -220,7 +226,7 @@ create table German as (select * from deutsch);
 
 
 
-
+-- Clean french values
 
 drop temporary table if exists franz;
 create temporary table franz(
@@ -442,7 +448,7 @@ drop table if exists French;
 create table French as (select * from franz);
 
 
-
+-- Clean italian values
 
 drop temporary table if exists itu;
 create temporary table itu(
@@ -664,6 +670,7 @@ drop table if exists Italian;
 create table Italian as (select * from itu);
 
 
+-- Clean english values
 
 drop temporary table if exists engl;
 create temporary table engl(
@@ -885,6 +892,7 @@ drop table if exists English;
 create table English as (select * from engl);
 
 
+-- Merge into one table
 
 drop table if exists alllanguages;
 
@@ -904,12 +912,12 @@ CREATE TABLE AllLanguages
 	Vallader_Search varchar (250), 
     German_Display varchar (250), 
     German_Search varchar (250), 
-    English_Display varchar (250),
-    English_Search varchar (250),
+	French_Display varchar (250),
+    French_Search varchar (250),
     Italian_Display varchar (250),
     Italian_Search varchar (250),
-    French_Display varchar (250),
-    French_Search varchar (250),
+    English_Display varchar (250),
+    English_Search varchar (250),
     Conjugation text,
     Lexical_Class_D varchar(250),
     Lexical_Class_R varchar(250),
@@ -931,12 +939,12 @@ insert into alllanguages (
 	Vallader_Search, 
     German_Display, 
     German_Search, 
-    English_Display,
-    English_Search,
-    Italian_Display,
-    Italian_Search,
     French_Display,
     French_Search,
+    Italian_Display,
+    Italian_Search,
+    English_Display,
+    English_Search,
     Conjugation,
     Lexical_Class_D,
     Lexical_Class_R,
@@ -947,23 +955,23 @@ insert into alllanguages (
 select	germantable.A1 as Grischun_Display,
 		lower(germantable.A2) as Grischun_Search, 
 		germantable.D1 as Sursilvan_Display,
-        germantable.D2 as Sursilvan_Search,
+        lower(germantable.D2) as Sursilvan_Search,
 		germantable.E1 as Sutsilvan_Display,
-        germantable.E2 as Sutsilvan_Search,
+        lower(germantable.E2) as Sutsilvan_Search,
 		germantable.F1 as Surmiran_Display, 
-        germantable.F2 as Surmiran_Search, 
+        lower(germantable.F2) as Surmiran_Search, 
 		germantable.G1 as Puter_Display, 
-        germantable.G2 as Puter_Search, 
+        lower(germantable.G2) as Puter_Search, 
 		germantable.H1 as Vallader_Display,
-		germantable.H2 as Vallader_Search,
+		lower(germantable.H2) as Vallader_Search,
 		germantable.B1 as German_Display,
-        germantable.B2 as German_Search, 
-		englishtable.B1 as English_Display,
-        englishtable.B2 as English_Search,
-		italiantable.B1 as Italian_Display, 
-        italiantable.B2 as Italian_Search, 
+        lower(germantable.B2) as German_Search, 
 		frenchtable.B1 as French_Display, 
-        frenchtable.B2 as French_Search, 
+        lower(frenchtable.B2) as French_Search, 
+		italiantable.B1 as Italian_Display, 
+        lower(italiantable.B2) as Italian_Search, 
+        englishtable.B1 as English_Display,
+        lower(englishtable.B2) as English_Search,
 		germantable.J4 as conjugation,
         germantable.B0,
         germantable.A3,
@@ -1001,25 +1009,25 @@ left outer join English englishtable on
 union
 
 select	germantable.A1 as Grischun_Display,
-		germantable.A2 as Grischun_Search, 
+		lower(germantable.A2) as Grischun_Search, 
 		germantable.D1 as Sursilvan_Display,
-        germantable.D2 as Sursilvan_Search,
+        lower(germantable.D2) as Sursilvan_Search,
 		germantable.E1 as Sutsilvan_Display,
-        germantable.E2 as Sutsilvan_Search,
+        lower(germantable.E2) as Sutsilvan_Search,
 		germantable.F1 as Surmiran_Display, 
-        germantable.F2 as Surmiran_Search, 
+        lower(germantable.F2) as Surmiran_Search, 
 		germantable.G1 as Puter_Display, 
-        germantable.G2 as Puter_Search, 
+        lower(germantable.G2) as Puter_Search, 
 		germantable.H1 as Vallader_Display,
-		germantable.H2 as Vallader_Search,
+		lower(germantable.H2) as Vallader_Search,
 		germantable.B1 as German_Display,
-        germantable.B2 as German_Search, 
-		englishtable.B1 as English_Display,
-        englishtable.B2 as English_Search,
-		italiantable.B1 as Italian_Display, 
-        italiantable.B2 as Italian_Search, 
+        lower(germantable.B2) as German_Search, 
 		frenchtable.B1 as French_Display, 
-        frenchtable.B2 as French_Search, 
+        lower(frenchtable.B2) as French_Search, 
+		italiantable.B1 as Italian_Display, 
+        lower(italiantable.B2) as Italian_Search, 
+        englishtable.B1 as English_Display,
+        lower(englishtable.B2) as English_Search,  
 		germantable.J4 as conjugation,
         germantable.B0,
         germantable.A3,
@@ -1059,25 +1067,25 @@ where germantable.nr is NULL
 union
 
 select	germantable.A1 as Grischun_Display,
-		germantable.A2 as Grischun_Search, 
+		lower(germantable.A2) as Grischun_Search, 
 		germantable.D1 as Sursilvan_Display,
-        germantable.D2 as Sursilvan_Search,
+        lower(germantable.D2) as Sursilvan_Search,
 		germantable.E1 as Sutsilvan_Display,
-        germantable.E2 as Sutsilvan_Search,
+        lower(germantable.E2) as Sutsilvan_Search,
 		germantable.F1 as Surmiran_Display, 
-        germantable.F2 as Surmiran_Search, 
+        lower(germantable.F2) as Surmiran_Search, 
 		germantable.G1 as Puter_Display, 
-        germantable.G2 as Puter_Search, 
+        lower(germantable.G2) as Puter_Search, 
 		germantable.H1 as Vallader_Display,
-		germantable.H2 as Vallader_Search,
+		lower(germantable.H2) as Vallader_Search,
 		germantable.B1 as German_Display,
-        germantable.B2 as German_Search, 
-		englishtable.B1 as English_Display,
-        englishtable.B2 as English_Search,
-		italiantable.B1 as Italian_Display, 
-        italiantable.B2 as Italian_Search, 
+        lower(germantable.B2) as German_Search, 
 		frenchtable.B1 as French_Display, 
-        frenchtable.B2 as French_Search, 
+        lower(frenchtable.B2) as French_Search, 
+		italiantable.B1 as Italian_Display, 
+        lower(italiantable.B2) as Italian_Search, 
+        englishtable.B1 as English_Display,
+        lower(englishtable.B2) as English_Search,  
 		germantable.J4 as conjugation,
         germantable.B0,
         germantable.A3,
@@ -1118,25 +1126,25 @@ where germantable.nr is NULL and italiantable.nr is NULL
 union
 
 select	germantable.A1 as Grischun_Display,
-		germantable.A2 as Grischun_Search, 
+		lower(germantable.A2) as Grischun_Search, 
 		germantable.D1 as Sursilvan_Display,
-        germantable.D2 as Sursilvan_Search,
+        lower(germantable.D2) as Sursilvan_Search,
 		germantable.E1 as Sutsilvan_Display,
-        germantable.E2 as Sutsilvan_Search,
+        lower(germantable.E2) as Sutsilvan_Search,
 		germantable.F1 as Surmiran_Display, 
-        germantable.F2 as Surmiran_Search, 
+        lower(germantable.F2) as Surmiran_Search, 
 		germantable.G1 as Puter_Display, 
-        germantable.G2 as Puter_Search, 
+        lower(germantable.G2) as Puter_Search, 
 		germantable.H1 as Vallader_Display,
-		germantable.H2 as Vallader_Search,
+		lower(germantable.H2) as Vallader_Search,
 		germantable.B1 as German_Display,
-        germantable.B2 as German_Search, 
-		englishtable.B1 as English_Display,
-        englishtable.B2 as English_Search,
-		italiantable.B1 as Italian_Display, 
-        italiantable.B2 as Italian_Search, 
+        lower(germantable.B2) as German_Search, 
 		frenchtable.B1 as French_Display, 
-        frenchtable.B2 as French_Search, 
+        lower(frenchtable.B2) as French_Search, 
+		italiantable.B1 as Italian_Display, 
+        lower(italiantable.B2) as Italian_Search, 
+        englishtable.B1 as English_Display,
+        lower(englishtable.B2) as English_Search,
 		germantable.J4 as conjugation,
         germantable.B0,
         germantable.A3,
