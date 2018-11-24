@@ -36,12 +36,12 @@ This repository includes...
 # Team
 
 The people behind this project/prototype are:
-* (sammy770)[https://github.com/sammy770]
-* (koluidi)[https://github.com/koluidi]
-* (sievilombriser)[https://github.com/sievilombriser]
-* (ocaduff)[https://github.com/ocaduff]
-* (hitgoeb)[https://github.com/hitgoeb]
-* (cdermont)[https://github.com/cdermont]
+* [sammy770](https://github.com/sammy770)
+* [koluidi](https://github.com/koluidi)
+* [sievilombriser](https://github.com/sievilombriser)
+* [ocaduff](https://github.com/ocaduff)
+* [hitgoeb](https://github.com/hitgoeb)
+* [cdermont](https://github.com/cdermont)
 * Karin Stephan
 * Flurin Bundi
 
