@@ -15,7 +15,7 @@ Currently, the tooltip offers translation from Rumantsch (all "idioms") to Germa
 
 # Implementation
 
-The tooltip is implemented as Chrome plugin/extension. 
+The tooltip is implemented as Firefox plugin/extension. 
 
 The plugin, if activated, adds a footer to any website to define the direction of translation. Next, the plugin tracks mouseover for words and directs a query to the database of pledari.ch, which returns exact matches based on the language selection made in the footer. Currently, the exact match is returned as a simple tooltip with a word. 
 
@@ -31,7 +31,8 @@ This repository includes...
 - [ ] Finalize the design of the tooltip as sketched in Fig. 1
 - [ ] Update the database behind pledari.ch to include all languages in one table
 - [ ] Get from a prototype to a beta version which can be installed without programmer knowledge
-- [ ] Add possibility to access the database behind (pledarigrond.ch)[http://pledarigrond.ch] to extend the word source for Rumantsch Grischun
+- [ ] Implement for other browsers
+- [ ] Add possibility to access the database behind [pledarigrond.ch](http://pledarigrond.ch) to extend the word source for Rumantsch Grischun
 
 # Team
 
