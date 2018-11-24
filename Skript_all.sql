@@ -1184,3 +1184,4 @@ where germantable.nr is NULL and italiantable.nr is NULL and frenchtable.nr is n
 
 
 create index i_Grischun_Search on alllanguages(Grischun_Search);
+create index i_Sursilvan_Search on alllanguages(Sursilvan_Search);
