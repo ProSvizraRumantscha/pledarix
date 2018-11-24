@@ -88,12 +88,12 @@ $(function () {
             end;
 
         //Find the begin of the word (space)
-        while (i > 0 && data[i] !== " ") { --i; };
+        while (i > 0 && data[i].match(/\w/)) { --i; };
         begin = i;
 
         //Find the end of the word
         i = offset;
-        while (i < data.length && data[i] !== " ") { ++i; };
+        while (i < data.length && data[i].match(/\w/)) { ++i; };
         end = i;
 
         //Return the word under the mouse cursor
@@ -107,6 +107,7 @@ $(function () {
 
         //Hand the word to the translation function
         if (word !== "")
+            word = word.match(/\w+/)[0];
             getTranslate(word);
     });
 });
