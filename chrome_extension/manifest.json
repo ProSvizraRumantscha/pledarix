@@ -1,0 +1,25 @@
+{
+
+  "manifest_version": 2,
+  "name": "HoverPledari",
+  "version": "1.0",
+
+  "description": "A Plugin which is translating words in Rumantsch when hovering with the mouse over the word.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery-3.3.1.js", "pledari.js"],
+      "css": ["pledari.css"]
+    }
+  ],
+
+  "permissions": [
+    "webRequest", "<all_urls>"
+  ]
+
+}
