@@ -1,10 +1,12 @@
-//document.body.style.border = "5px solid red";
-
-console.log("hello world");
+const BACKEND_URL = "http://mypledari.ch/tooltipQuery.php";
+const LRU_CACHE_SIZE = 1024;
+const DEBUG = false;
 
 // create tooltip Box and append to body
-var tooltipdiv = "<div class='tooltipdiv'><p class='tooltiptext'>Tooltip Placeholder Text</p></div>";
+var tooltipdiv = "<div class='tooltipdiv'><p class='tooltiptext'></p></div>";
 
+var lruCache = new LRUMap(LRU_CACHE_SIZE);
+var translating = false;
 var mouseX;
 var mouseY;
 $(document).mousemove( function(e) {
@@ -13,41 +15,91 @@ $(document).mousemove( function(e) {
    $(".tooltipdiv").css({'top':mouseY+20,'left':mouseX});
 });
 
-//word to be looked up in dictionary
-var lookupWord;
-// value for direction of translation
-var lookupDirecziun = 7; // initialize to option 7, rumantsch to german
+var languages = [
+  ['grischun','Rumantsch (RG)'],
+  ['sursilvan','Sursilvan'],
+  ['sutsilvan','Sutsilvan'],
+  ['surmiran','Surmiran'],
+  ['vallader','Vallader'],
+  ['puter','Puter'],
+  ['german','Deutsch'],
+  ['french','Français'],
+  ['italian','Italian'],
+  ['english','English']
+];
 
 $("body").append(tooltipdiv);
-$("body").append("<div class='footerPledariSelect'><form><label>Direcziun per la tschertga / Suchrichtung </label><select name='direcziun' id='direcziun_dropdown'><option value='0'>Deutsch -&gt; Romansh (RG)</option><option value='1'>Rumantsch (RG) -&gt; Deutsch</option><option value='2'>Sursilvan -&gt; Deutsch</option><option value='3'>Sutsilvan -&gt; Deutsch</option><option value='4'>Surmiran -&gt; Deutsch</option><option value='5'>Puter -&gt; Deutsch</option><option value='6'>Vallader -&gt; Deutsch</option><option value='7' selected=''>Rumantsch (total) -&gt; Deutsch</option></select></form></div>");
+$("body").append(
+  "<div class='footerPledariSelect'><form>"+
+  "<label>Direcziun per la tschertga / Suchrichtung </label>"+
+  "<select name='search' id='search_dropdown'>"+
+  languages.map(lang => "<option value='"+lang[0]+"'>"+lang[1]+"</option>").join('\n') +
+  "</select> &gt; "+
+  "<select name='display' id='display_dropdown'>"+
+  languages.map(lang => "<option value='"+lang[0]+"'>"+lang[1]+"</option>").join('\n') +
+  "</select></form></div>");
 
-$(document).on("change","select",function(){
-  $("option[value=" + this.value + "]", this)
-  .attr("selected", true).siblings()
-  .removeAttr("selected")
-  console.log(document.getElementById('direcziun_dropdown').value);
-});
+  //initial values for selection
+$("#search_dropdown").val('grischun');
+$("#display_dropdown").val('german');
 
-function getTranslate(str){
-  lookupDirecziun = document.getElementById('direcziun_dropdown').value;
-  console.log(str.trim());
-  if (str != lookupWord) {
+function getTranslate(lookupWord){
+  var searchLang = $("#search_dropdown").val();
+  var displayLang = $("#display_dropdown").val();
+  if (searchLang === displayLang
+      || !Boolean(lookupWord)) { //no lookupWord at all?
+    renderLookupResult(null);
+    return;
+  }
+  lookupWord = lookupWord.toLowerCase().trim();
+  var cacheKey = searchLang + "." + displayLang + "." + lookupWord;
+  var lookupResult = lruCache.get(cacheKey);
+  if (lookupResult) {
+    logDebug("cache hit for " + cacheKey);
+    renderLookupResult(lookupResult);
+  } else {
+    logDebug("cache miss for " + cacheKey);
+    if (translating) {
+      logDebug("prevent translating " + cacheKey);
+      return;
+    }
+    translating = true; //about to translate, prevent sending multiple parallel requests
+    logDebug("translating " + cacheKey);
+    $.ajax({
+        url: BACKEND_URL, 
+        data: {search: searchLang, display: displayLang, pled: lookupWord},
+        success: function(lookupResult){
+          renderLookupResult(lookupResult);
+          if (!lookupResult || !lookupResult.translation) {
+            //nothing was found, prevent further lookups
+            lookupResult = ".";
+          }
+          lruCache.set(cacheKey, lookupResult);
+        },
+        complete: function() {
+          translating = false;
+          logDebug("done translating");
+        },
+        error: function(xhr, status, thrown) {
+          console.warn("failed contacting translation backend: " + status, thrown);
+        }
+      });
+    }
+}
+
+function logDebug(text) {
+  if (DEBUG) {
+    console.log(text);
+  }
+}
+
+function renderLookupResult(result) {
+  if (result && result.translation) {
+    $(".tooltiptext").text(result.translation);
+    $(".tooltipdiv").show();
+  } else {
     $(".tooltipdiv").hide();
   }
-  var query = "http://pledari.ch/tooltipQuery.php?direcziun="+lookupDirecziun+"&modus=exact&pled=" + str.trim();
-  console.log(query);
-  $.get(query).done(function(data){
-    console.log(data);
-      if (lookupDirecziun == 0) {
-        result = JSON.parse(data)["A1"];
-      } else {
-        result = JSON.parse(data)["B1"];
-      }
-
-      $(".tooltiptext").html(result);
-      $(".tooltipdiv").show();
-      lookupWord = str;
-  })
 }
 
 

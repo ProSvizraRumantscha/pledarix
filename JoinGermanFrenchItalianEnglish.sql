@@ -2,6 +2,8 @@
 -- Combine the German, French, Italian and English translations into one table
 -------
 
+SET SQL_SAFE_UPDATES = 0;
+
 -- Clean german values
 
 DROP TABLE IF EXISTS German;
@@ -876,9 +878,9 @@ WHERE 	H2 = '-----' OR
 
 -- Merge into one table
 
-DROP TABLE IF EXISTS alllanguages;
+DROP TABLE IF EXISTS Alllanguages;
 
-CREATE TABLE AllLanguages 
+CREATE TABLE Alllanguages 
 	(id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     Grischun_Display VARCHAR(250), 
     Grischun_Search VARCHAR(250), 
@@ -906,7 +908,7 @@ CREATE TABLE AllLanguages
     Source_Table_Name VARCHAR(50),
     Source_Table_Row_ID INT);
 
-INSERT INTO alllanguages (
+INSERT INTO Alllanguages (
     Grischun_Display, 
     Grischun_Search, 
     Sursilvan_Display, 
@@ -1172,13 +1174,13 @@ DROP TABLE IF EXISTS English;
 
 -- Indexes for optimated searching
 
-CREATE INDEX i_Grischun_Search ON alllanguages(Grischun_Search);
-CREATE INDEX i_Sursilvan_Search ON alllanguages(Sursilvan_Search);
-CREATE INDEX i_Sutsilvan_Search ON alllanguages(Sutsilvan_Search);
-CREATE INDEX i_Surmiran_Search ON alllanguages(Surmiran_Search);
-CREATE INDEX i_Puter_Search ON alllanguages(Puter_Search);
-CREATE INDEX i_Vallader_Search ON alllanguages(Vallader_Search);
-CREATE INDEX i_German_Search ON alllanguages(German_Search);
-CREATE INDEX i_French_Search ON alllanguages(French_Search);
-CREATE INDEX i_Italian_Search ON alllanguages(Italian_Search);
-CREATE INDEX i_English_Search ON alllanguages(English_Search);
+CREATE INDEX i_Grischun_Search ON Alllanguages(Grischun_Search);
+CREATE INDEX i_Sursilvan_Search ON Alllanguages(Sursilvan_Search);
+CREATE INDEX i_Sutsilvan_Search ON Alllanguages(Sutsilvan_Search);
+CREATE INDEX i_Surmiran_Search ON Alllanguages(Surmiran_Search);
+CREATE INDEX i_Puter_Search ON Alllanguages(Puter_Search);
+CREATE INDEX i_Vallader_Search ON Alllanguages(Vallader_Search);
+CREATE INDEX i_German_Search ON Alllanguages(German_Search);
+CREATE INDEX i_French_Search ON Alllanguages(French_Search);
+CREATE INDEX i_Italian_Search ON Alllanguages(Italian_Search);
+CREATE INDEX i_English_Search ON Alllanguages(English_Search);

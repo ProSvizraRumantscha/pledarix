@@ -1,25 +1,30 @@
 <?php
 include "config.php";
-include "SqlQueryGenerator.php";
+include "SqlTooltipQueryGenerator.php";
 
 $pled = @$_GET['pled'];
-$direcziun = @$_GET['direcziun'];
+$search = @$_GET['search'];
+$display = @$_GET['display'];
 $modus = @$_GET['modus'];
+header('Content-type: application/json');
 
-$colligiaziun = mysqli_connect("localhost", $mysql_user, $mysql_pass, $mysql_db);
-$SQLString = SqlQueryGenerator::generateDeQuery($pled, $direcziun, $modus);
+$SQLString = SqlTooltipQueryGenerator::getQuery($search, $display);
+if (!is_null($SQLString) && trim($str) !== $pled) {
+	$colligiaziun = mysqli_connect("localhost", $mysql_user, $mysql_pass, $mysql_db);
 
-$Ergebnis = mysqli_query($colligiaziun, $SQLString);
+	$stmt = $colligiaziun->prepare($SQLString);
+	$stmt->bind_param('s', $pled);
+	$stmt->execute();
 
-$field = $Ergebnis->fetch_array();
+	$res = $stmt->get_result();
 
-if (is_null($field)) {
-	$modus = "entschatta";
-	$SQLString = SqlQueryGenerator::generateDeQuery($pled, $direcziun, $modus);
-	$Ergebnis = mysqli_query($colligiaziun, $SQLString);	
-	$field = $Ergebnis->fetch_array();
+	$field = $res->fetch_assoc();
+
+	print json_encode($field);
+	$stmt->close();
+	$colligiaziun->close();
+} else {
+	print json_encode('unable to query');
 }
-
-print json_encode($field); 
 
 ?>
