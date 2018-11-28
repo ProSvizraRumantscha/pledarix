@@ -15,11 +15,9 @@ UPDATE German
 SET A1 = '' 
 WHERE 	A1 = '-----' OR 
 		A1 = '..' OR 
-		A1 = '(=RG)' OR 
 		A1 = '' OR 
 		A1 = '.' OR 
 		A1 = '\'-----' OR 
-		A1 = '(RG)' OR 
 		A1  LIKE '* Guardar las remartgas.%' OR
 		A1 = '___' OR 
         A1 = '----' OR
@@ -29,11 +27,9 @@ UPDATE German
 SET A2 = '' 
 WHERE 	A2 = '-----' OR 
 		A2 = '..' OR 
-		A2 = '(=RG)' OR 
 		A2 = '' OR 
 		A2 = '.' OR 
 		A2 = '\'-----' OR 
-		A2 = '(RG)' OR 
 		A2  LIKE '* Guardar las remartgas.%' OR
 		A2 = '___' OR 
         A2 = '----' OR
@@ -43,11 +39,9 @@ UPDATE German
 SET B0 = '' 
 WHERE 	B0 = '-----' OR 
 		B0 = '..' OR 
-		B0 = '(=RG)' OR 
 		B0 = '' OR 
 		B0 = '.' OR 
 		B0 = '\'-----' OR 
-		B0 = '(RG)' OR 
 		B0  LIKE '* Guardar las remartgas.%' OR
 		B0 = '___' OR 
         B0 = '----' OR
@@ -57,11 +51,9 @@ UPDATE German
 SET B1 = '' 
 WHERE 	B1 = '-----' OR 
 		B1 = '..' OR 
-		B1 = '(=RG)' OR 
 		B1 = '' OR 
 		B1 = '.' OR 
 		B1 = '\'-----' OR 
-		B1 = '(RG)' OR 
 		B1  LIKE '* Guardar las remartgas.%' OR
 		B1 = '___' OR 
         B1 = '----' OR
@@ -71,11 +63,9 @@ UPDATE German
 SET B2 = '' 
 WHERE 	B2 = '-----' OR 
 		B2 = '..' OR 
-		B2 = '(=RG)' OR 
 		B2 = '' OR 
 		B2 = '.' OR 
 		B2 = '\'-----' OR 
-		B2 = '(RG)' OR 
 		B2  LIKE '* Guardar las remartgas.%' OR
 		B2 = '___' OR 
         B2 = '----' OR
@@ -85,11 +75,9 @@ UPDATE German
 SET D1 = '' 
 WHERE 	D1 = '-----' OR 
 		D1 = '..' OR 
-		D1 = '(=RG)' OR 
 		D1 = '' OR 
 		D1 = '.' OR 
 		D1 = '\'-----' OR 
-		D1 = '(RG)' OR 
 		D1  LIKE '* Guardar las remartgas.%' OR
 		D1 = '___' OR 
         D1 = '----' OR
@@ -99,11 +87,9 @@ UPDATE German
 SET D2 = '' 
 WHERE 	D2 = '-----' OR 
 		D2 = '..' OR 
-        D2 = '(=RG)' OR 
         D2 = '' OR 
         D2 = '.' OR 
         D2 = '\'-----' OR 
-        D2 = '(RG)' OR 
         D2  LIKE '* Guardar las remartgas.%' OR
 		D2 = '___' OR 
         D2 = '----' OR
@@ -113,11 +99,9 @@ UPDATE German
 SET E1 = '' 
 WHERE 	E1 = '-----' OR 
 		E1 = '..' OR 
-        E1 = '(=RG)' OR
         E1 = '' OR 
         E1 = '.' OR 
         E1 = '\'-----' OR 
-        E1 = '(RG)' OR 
         E1  LIKE '* Guardar las remartgas.%' OR
 		E1 = '___' OR 
         E1 = '----' OR
@@ -127,11 +111,9 @@ UPDATE German
 SET E2 = '' 
 WHERE 	E2 = '-----' OR 
 		E2 = '..' OR 
-        E2 = '(=RG)' OR
         E2 = '' OR 
         E2 = '.' OR 
         E2 = '\'-----' OR 
-        E2 = '(RG)' OR 
         E2  LIKE '* Guardar las remartgas.%' OR
 		E2 = '___' OR 
         E2 = '----' OR
@@ -141,11 +123,9 @@ UPDATE German
 SET F1 = '' 
 WHERE 	F1 = '-----' OR 
 		F1 = '..' OR 
-        F1 = '(=RG)' OR 
         F1 = '' OR 
         F1 = '.' OR 
         F1 = '\'-----' OR 
-        F1 = '(RG)' OR 
         F1  LIKE '* Guardar las remartgas.%'  OR
 		F1 = '___' OR 
         F1 = '----' OR
@@ -155,11 +135,9 @@ UPDATE German
 SET F2 = '' 
 WHERE 	F2 = '-----' OR 
 		F2 = '..' OR 
-        F2 = '(=RG)' OR 
         F2 = '' OR 
         F2 = '.' OR 
         F2 = '\'-----' OR 
-        F2 = '(RG)' OR 
         F2  LIKE '* Guardar las remartgas.%' OR
 		F2 = '___' OR 
         F2 = '----' OR
@@ -169,11 +147,9 @@ UPDATE German
 SET G1 = '' 
 WHERE 	G1 = '-----' OR 
 		G1 = '..' OR 
-        G1 = '(=RG)' OR 
         G1 = '' OR 
         G1 = '.' OR 
 		G1 = '\'-----' OR 
-        G1 = '(RG)' OR 
         G1  LIKE '* Guardar las remartgas.%' OR
 		G1 = '___' OR 
         G1 = '----' OR
@@ -183,11 +159,9 @@ UPDATE German
 SET G2 = '' 
 WHERE 	G2 = '-----' OR 
 		G2 = '..' OR 
-        G2 = '(=RG)' OR 
         G2 = '' OR 
         G2 = '.' OR 
 		G2 = '\'-----' OR 
-        G2 = '(RG)' OR 
         G2  LIKE '* Guardar las remartgas.%' OR
 		G2 = '___' OR 
         G2 = '----' OR
@@ -197,11 +171,9 @@ UPDATE German
 SET H1 = '' 
 WHERE 	H1 = '-----' OR 
 		H1 = '..' OR 
-        H1 = '(=RG)' OR 
         H1 = '' OR 
         H1 = '.' OR 
         H1 = '\'-----' OR 
-        H1 = '(RG)' OR 
         H1  LIKE '* Guardar las remartgas.%' OR
 		H1 = '___' OR 
         H1 = '----' OR
@@ -211,11 +183,9 @@ UPDATE German
 SET H2 = '' 
 WHERE 	H2 = '-----' OR 
 		H2 = '..' OR 
-        H2 = '(=RG)' OR 
         H2 = '' OR 
         H2 = '.' OR 
         H2 = '\'-----' OR 
-        H2 = '(RG)' OR 
         H2  LIKE '* Guardar las remartgas.%' OR
 		H2 = '___' OR 
         H2 = '----' OR
@@ -233,11 +203,9 @@ UPDATE French
 SET A1 = '' 
 WHERE 	A1 = '-----' OR 
 		A1 = '..' OR 
-		A1 = '(=RG)' OR 
 		A1 = '' OR 
 		A1 = '.' OR 
 		A1 = '\'-----' OR 
-		A1 = '(RG)' OR 
 		A1  LIKE '* Guardar las remartgas.%' OR
 		A1 = '___' OR 
         A1 = '----' OR
@@ -247,11 +215,9 @@ UPDATE French
 SET A2 = '' 
 WHERE 	A2 = '-----' OR 
 		A2 = '..' OR 
-		A2 = '(=RG)' OR 
 		A2 = '' OR 
 		A2 = '.' OR 
 		A2 = '\'-----' OR 
-		A2 = '(RG)' OR 
 		A2  LIKE '* Guardar las remartgas.%' OR
 		A2 = '___' OR 
         A2 = '----' OR
@@ -261,11 +227,9 @@ UPDATE French
 SET B0 = '' 
 WHERE 	B0 = '-----' OR 
 		B0 = '..' OR 
-		B0 = '(=RG)' OR 
 		B0 = '' OR 
 		B0 = '.' OR 
 		B0 = '\'-----' OR 
-		B0 = '(RG)' OR 
 		B0  LIKE '* Guardar las remartgas.%' OR
 		B0 = '___' OR 
         B0 = '----' OR
@@ -275,11 +239,9 @@ UPDATE French
 SET B1 = '' 
 WHERE 	B1 = '-----' OR 
 		B1 = '..' OR 
-		B1 = '(=RG)' OR 
 		B1 = '' OR 
 		B1 = '.' OR 
 		B1 = '\'-----' OR 
-		B1 = '(RG)' OR 
 		B1  LIKE '* Guardar las remartgas.%' OR
 		B1 = '___' OR 
         B1 = '----' OR
@@ -289,11 +251,9 @@ UPDATE French
 SET B2 = '' 
 WHERE 	B2 = '-----' OR 
 		B2 = '..' OR 
-		B2 = '(=RG)' OR 
 		B2 = '' OR 
 		B2 = '.' OR 
 		B2 = '\'-----' OR 
-		B2 = '(RG)' OR 
 		B2  LIKE '* Guardar las remartgas.%' OR
 		B2 = '___' OR 
         B2 = '----' OR
@@ -303,11 +263,9 @@ UPDATE French
 SET D1 = '' 
 WHERE 	D1 = '-----' OR 
 		D1 = '..' OR 
-		D1 = '(=RG)' OR 
 		D1 = '' OR 
 		D1 = '.' OR 
 		D1 = '\'-----' OR 
-		D1 = '(RG)' OR 
 		D1  LIKE '* Guardar las remartgas.%' OR
 		D1 = '___' OR 
         D1 = '----' OR
@@ -317,11 +275,9 @@ UPDATE French
 SET D2 = '' 
 WHERE 	D2 = '-----' OR 
 		D2 = '..' OR 
-        D2 = '(=RG)' OR 
         D2 = '' OR 
         D2 = '.' OR 
         D2 = '\'-----' OR 
-        D2 = '(RG)' OR 
         D2  LIKE '* Guardar las remartgas.%' OR
 		D2 = '___' OR 
         D2 = '----' OR
@@ -331,11 +287,9 @@ UPDATE French
 SET E1 = '' 
 WHERE 	E1 = '-----' OR 
 		E1 = '..' OR 
-        E1 = '(=RG)' OR
         E1 = '' OR 
         E1 = '.' OR 
         E1 = '\'-----' OR 
-        E1 = '(RG)' OR 
         E1  LIKE '* Guardar las remartgas.%' OR
 		E1 = '___' OR 
         E1 = '----' OR
@@ -345,11 +299,9 @@ UPDATE French
 SET E2 = '' 
 WHERE 	E2 = '-----' OR 
 		E2 = '..' OR 
-        E2 = '(=RG)' OR
         E2 = '' OR 
         E2 = '.' OR 
         E2 = '\'-----' OR 
-        E2 = '(RG)' OR 
         E2  LIKE '* Guardar las remartgas.%' OR
 		E2 = '___' OR 
         E2 = '----' OR
@@ -359,11 +311,9 @@ UPDATE French
 SET F1 = '' 
 WHERE 	F1 = '-----' OR 
 		F1 = '..' OR 
-        F1 = '(=RG)' OR 
         F1 = '' OR 
         F1 = '.' OR 
         F1 = '\'-----' OR 
-        F1 = '(RG)' OR 
         F1  LIKE '* Guardar las remartgas.%'  OR
 		F1 = '___' OR 
         F1 = '----' OR
@@ -373,11 +323,9 @@ UPDATE French
 SET F2 = '' 
 WHERE 	F2 = '-----' OR 
 		F2 = '..' OR 
-        F2 = '(=RG)' OR 
         F2 = '' OR 
         F2 = '.' OR 
         F2 = '\'-----' OR 
-        F2 = '(RG)' OR 
         F2  LIKE '* Guardar las remartgas.%' OR
 		F2 = '___' OR 
         F2 = '----' OR
@@ -387,11 +335,9 @@ UPDATE French
 SET G1 = '' 
 WHERE 	G1 = '-----' OR 
 		G1 = '..' OR 
-        G1 = '(=RG)' OR 
         G1 = '' OR 
         G1 = '.' OR 
 		G1 = '\'-----' OR 
-        G1 = '(RG)' OR 
         G1  LIKE '* Guardar las remartgas.%' OR
 		G1 = '___' OR 
         G1 = '----' OR
@@ -401,11 +347,9 @@ UPDATE French
 SET G2 = '' 
 WHERE 	G2 = '-----' OR 
 		G2 = '..' OR 
-        G2 = '(=RG)' OR 
         G2 = '' OR 
         G2 = '.' OR 
 		G2 = '\'-----' OR 
-        G2 = '(RG)' OR 
         G2  LIKE '* Guardar las remartgas.%' OR
 		G2 = '___' OR 
         G2 = '----' OR
@@ -415,11 +359,9 @@ UPDATE French
 SET H1 = '' 
 WHERE 	H1 = '-----' OR 
 		H1 = '..' OR 
-        H1 = '(=RG)' OR 
         H1 = '' OR 
         H1 = '.' OR 
         H1 = '\'-----' OR 
-        H1 = '(RG)' OR 
         H1  LIKE '* Guardar las remartgas.%' OR
 		H1 = '___' OR 
         H1 = '----' OR
@@ -429,11 +371,9 @@ UPDATE French
 SET H2 = '' 
 WHERE 	H2 = '-----' OR 
 		H2 = '..' OR 
-        H2 = '(=RG)' OR 
         H2 = '' OR 
         H2 = '.' OR 
         H2 = '\'-----' OR 
-        H2 = '(RG)' OR 
         H2  LIKE '* Guardar las remartgas.%' OR
 		H2 = '___' OR 
         H2 = '----' OR
@@ -451,11 +391,9 @@ UPDATE Italian
 SET A1 = '' 
 WHERE 	A1 = '-----' OR 
 		A1 = '..' OR 
-		A1 = '(=RG)' OR 
 		A1 = '' OR 
 		A1 = '.' OR 
 		A1 = '\'-----' OR 
-		A1 = '(RG)' OR 
 		A1  LIKE '* Guardar las remartgas.%' OR
 		A1 = '___' OR 
         A1 = '----' OR
@@ -465,11 +403,9 @@ UPDATE Italian
 SET A2 = '' 
 WHERE 	A2 = '-----' OR 
 		A2 = '..' OR 
-		A2 = '(=RG)' OR 
 		A2 = '' OR 
 		A2 = '.' OR 
 		A2 = '\'-----' OR 
-		A2 = '(RG)' OR 
 		A2  LIKE '* Guardar las remartgas.%' OR
 		A2 = '___' OR 
         A2 = '----' OR
@@ -479,11 +415,9 @@ UPDATE Italian
 SET B0 = '' 
 WHERE 	B0 = '-----' OR 
 		B0 = '..' OR 
-		B0 = '(=RG)' OR 
 		B0 = '' OR 
 		B0 = '.' OR 
 		B0 = '\'-----' OR 
-		B0 = '(RG)' OR 
 		B0  LIKE '* Guardar las remartgas.%' OR
 		B0 = '___' OR 
         B0 = '----' OR
@@ -493,11 +427,9 @@ UPDATE Italian
 SET B1 = '' 
 WHERE 	B1 = '-----' OR 
 		B1 = '..' OR 
-		B1 = '(=RG)' OR 
 		B1 = '' OR 
 		B1 = '.' OR 
 		B1 = '\'-----' OR 
-		B1 = '(RG)' OR 
 		B1  LIKE '* Guardar las remartgas.%' OR
 		B1 = '___' OR 
         B1 = '----' OR
@@ -507,11 +439,9 @@ UPDATE Italian
 SET B2 = '' 
 WHERE 	B2 = '-----' OR 
 		B2 = '..' OR 
-		B2 = '(=RG)' OR 
 		B2 = '' OR 
 		B2 = '.' OR 
 		B2 = '\'-----' OR 
-		B2 = '(RG)' OR 
 		B2  LIKE '* Guardar las remartgas.%' OR
 		B2 = '___' OR 
         B2 = '----' OR
@@ -521,11 +451,9 @@ UPDATE Italian
 SET D1 = '' 
 WHERE 	D1 = '-----' OR 
 		D1 = '..' OR 
-		D1 = '(=RG)' OR 
 		D1 = '' OR 
 		D1 = '.' OR 
 		D1 = '\'-----' OR 
-		D1 = '(RG)' OR 
 		D1  LIKE '* Guardar las remartgas.%' OR
 		D1 = '___' OR 
         D1 = '----' OR
@@ -535,11 +463,9 @@ UPDATE Italian
 SET D2 = '' 
 WHERE 	D2 = '-----' OR 
 		D2 = '..' OR 
-        D2 = '(=RG)' OR 
         D2 = '' OR 
         D2 = '.' OR 
         D2 = '\'-----' OR 
-        D2 = '(RG)' OR 
         D2  LIKE '* Guardar las remartgas.%' OR
 		D2 = '___' OR 
         D2 = '----' OR
@@ -549,11 +475,9 @@ UPDATE Italian
 SET E1 = '' 
 WHERE 	E1 = '-----' OR 
 		E1 = '..' OR 
-        E1 = '(=RG)' OR
         E1 = '' OR 
         E1 = '.' OR 
         E1 = '\'-----' OR 
-        E1 = '(RG)' OR 
         E1  LIKE '* Guardar las remartgas.%' OR
 		E1 = '___' OR 
         E1 = '----' OR
@@ -563,11 +487,9 @@ UPDATE Italian
 SET E2 = '' 
 WHERE 	E2 = '-----' OR 
 		E2 = '..' OR 
-        E2 = '(=RG)' OR
         E2 = '' OR 
         E2 = '.' OR 
         E2 = '\'-----' OR 
-        E2 = '(RG)' OR 
         E2  LIKE '* Guardar las remartgas.%' OR
 		E2 = '___' OR 
         E2 = '----' OR
@@ -577,11 +499,9 @@ UPDATE Italian
 SET F1 = '' 
 WHERE 	F1 = '-----' OR 
 		F1 = '..' OR 
-        F1 = '(=RG)' OR 
         F1 = '' OR 
         F1 = '.' OR 
         F1 = '\'-----' OR 
-        F1 = '(RG)' OR 
         F1  LIKE '* Guardar las remartgas.%'  OR
 		F1 = '___' OR 
         F1 = '----' OR
@@ -591,11 +511,9 @@ UPDATE Italian
 SET F2 = '' 
 WHERE 	F2 = '-----' OR 
 		F2 = '..' OR 
-        F2 = '(=RG)' OR 
         F2 = '' OR 
         F2 = '.' OR 
         F2 = '\'-----' OR 
-        F2 = '(RG)' OR 
         F2  LIKE '* Guardar las remartgas.%' OR
 		F2 = '___' OR 
         F2 = '----' OR
@@ -605,11 +523,9 @@ UPDATE Italian
 SET G1 = '' 
 WHERE 	G1 = '-----' OR 
 		G1 = '..' OR 
-        G1 = '(=RG)' OR 
         G1 = '' OR 
         G1 = '.' OR 
 		G1 = '\'-----' OR 
-        G1 = '(RG)' OR 
         G1  LIKE '* Guardar las remartgas.%' OR
 		G1 = '___' OR 
         G1 = '----' OR
@@ -619,11 +535,9 @@ UPDATE Italian
 SET G2 = '' 
 WHERE 	G2 = '-----' OR 
 		G2 = '..' OR 
-        G2 = '(=RG)' OR 
         G2 = '' OR 
         G2 = '.' OR 
 		G2 = '\'-----' OR 
-        G2 = '(RG)' OR 
         G2  LIKE '* Guardar las remartgas.%' OR
 		G2 = '___' OR 
         G2 = '----' OR
@@ -633,11 +547,9 @@ UPDATE Italian
 SET H1 = '' 
 WHERE 	H1 = '-----' OR 
 		H1 = '..' OR 
-        H1 = '(=RG)' OR 
         H1 = '' OR 
         H1 = '.' OR 
         H1 = '\'-----' OR 
-        H1 = '(RG)' OR 
         H1  LIKE '* Guardar las remartgas.%' OR
 		H1 = '___' OR 
         H1 = '----' OR
@@ -647,11 +559,9 @@ UPDATE Italian
 SET H2 = '' 
 WHERE 	H2 = '-----' OR 
 		H2 = '..' OR 
-        H2 = '(=RG)' OR 
         H2 = '' OR 
         H2 = '.' OR 
         H2 = '\'-----' OR 
-        H2 = '(RG)' OR 
         H2  LIKE '* Guardar las remartgas.%' OR
 		H2 = '___' OR 
         H2 = '----' OR
@@ -669,11 +579,9 @@ UPDATE English
 SET A1 = '' 
 WHERE 	A1 = '-----' OR 
 		A1 = '..' OR 
-		A1 = '(=RG)' OR 
 		A1 = '' OR 
 		A1 = '.' OR 
 		A1 = '\'-----' OR 
-		A1 = '(RG)' OR 
 		A1  LIKE '* Guardar las remartgas.%' OR
 		A1 = '___' OR 
         A1 = '----' OR
@@ -683,11 +591,9 @@ UPDATE English
 SET A2 = '' 
 WHERE 	A2 = '-----' OR 
 		A2 = '..' OR 
-		A2 = '(=RG)' OR 
 		A2 = '' OR 
 		A2 = '.' OR 
 		A2 = '\'-----' OR 
-		A2 = '(RG)' OR 
 		A2  LIKE '* Guardar las remartgas.%' OR
 		A2 = '___' OR 
         A2 = '----' OR
@@ -697,11 +603,9 @@ UPDATE English
 SET B0 = '' 
 WHERE 	B0 = '-----' OR 
 		B0 = '..' OR 
-		B0 = '(=RG)' OR 
 		B0 = '' OR 
 		B0 = '.' OR 
 		B0 = '\'-----' OR 
-		B0 = '(RG)' OR 
 		B0  LIKE '* Guardar las remartgas.%' OR
 		B0 = '___' OR 
         B0 = '----' OR
@@ -711,11 +615,9 @@ UPDATE English
 SET B1 = '' 
 WHERE 	B1 = '-----' OR 
 		B1 = '..' OR 
-		B1 = '(=RG)' OR 
 		B1 = '' OR 
 		B1 = '.' OR 
 		B1 = '\'-----' OR 
-		B1 = '(RG)' OR 
 		B1  LIKE '* Guardar las remartgas.%' OR
 		B1 = '___' OR 
         B1 = '----' OR
@@ -725,11 +627,9 @@ UPDATE English
 SET B2 = '' 
 WHERE 	B2 = '-----' OR 
 		B2 = '..' OR 
-		B2 = '(=RG)' OR 
 		B2 = '' OR 
 		B2 = '.' OR 
 		B2 = '\'-----' OR 
-		B2 = '(RG)' OR 
 		B2  LIKE '* Guardar las remartgas.%' OR
 		B2 = '___' OR 
         B2 = '----' OR
@@ -739,11 +639,9 @@ UPDATE English
 SET D1 = '' 
 WHERE 	D1 = '-----' OR 
 		D1 = '..' OR 
-		D1 = '(=RG)' OR 
 		D1 = '' OR 
 		D1 = '.' OR 
 		D1 = '\'-----' OR 
-		D1 = '(RG)' OR 
 		D1  LIKE '* Guardar las remartgas.%' OR
 		D1 = '___' OR 
         D1 = '----' OR
@@ -753,11 +651,9 @@ UPDATE English
 SET D2 = '' 
 WHERE 	D2 = '-----' OR 
 		D2 = '..' OR 
-        D2 = '(=RG)' OR 
         D2 = '' OR 
         D2 = '.' OR 
         D2 = '\'-----' OR 
-        D2 = '(RG)' OR 
         D2  LIKE '* Guardar las remartgas.%' OR
 		D2 = '___' OR 
         D2 = '----' OR
@@ -767,11 +663,9 @@ UPDATE English
 SET E1 = '' 
 WHERE 	E1 = '-----' OR 
 		E1 = '..' OR 
-        E1 = '(=RG)' OR
         E1 = '' OR 
         E1 = '.' OR 
         E1 = '\'-----' OR 
-        E1 = '(RG)' OR 
         E1  LIKE '* Guardar las remartgas.%' OR
 		E1 = '___' OR 
         E1 = '----' OR
@@ -781,11 +675,9 @@ UPDATE English
 SET E2 = '' 
 WHERE 	E2 = '-----' OR 
 		E2 = '..' OR 
-        E2 = '(=RG)' OR
         E2 = '' OR 
         E2 = '.' OR 
         E2 = '\'-----' OR 
-        E2 = '(RG)' OR 
         E2  LIKE '* Guardar las remartgas.%' OR
 		E2 = '___' OR 
         E2 = '----' OR
@@ -795,11 +687,9 @@ UPDATE English
 SET F1 = '' 
 WHERE 	F1 = '-----' OR 
 		F1 = '..' OR 
-        F1 = '(=RG)' OR 
         F1 = '' OR 
         F1 = '.' OR 
         F1 = '\'-----' OR 
-        F1 = '(RG)' OR 
         F1  LIKE '* Guardar las remartgas.%'  OR
 		F1 = '___' OR 
         F1 = '----' OR
@@ -809,11 +699,9 @@ UPDATE English
 SET F2 = '' 
 WHERE 	F2 = '-----' OR 
 		F2 = '..' OR 
-        F2 = '(=RG)' OR 
         F2 = '' OR 
         F2 = '.' OR 
         F2 = '\'-----' OR 
-        F2 = '(RG)' OR 
         F2  LIKE '* Guardar las remartgas.%' OR
 		F2 = '___' OR 
         F2 = '----' OR
@@ -823,11 +711,9 @@ UPDATE English
 SET G1 = '' 
 WHERE 	G1 = '-----' OR 
 		G1 = '..' OR 
-        G1 = '(=RG)' OR 
         G1 = '' OR 
         G1 = '.' OR 
 		G1 = '\'-----' OR 
-        G1 = '(RG)' OR 
         G1  LIKE '* Guardar las remartgas.%' OR
 		G1 = '___' OR 
         G1 = '----' OR
@@ -837,11 +723,9 @@ UPDATE English
 SET G2 = '' 
 WHERE 	G2 = '-----' OR 
 		G2 = '..' OR 
-        G2 = '(=RG)' OR 
         G2 = '' OR 
         G2 = '.' OR 
 		G2 = '\'-----' OR 
-        G2 = '(RG)' OR 
         G2  LIKE '* Guardar las remartgas.%' OR
 		G2 = '___' OR 
         G2 = '----' OR
@@ -851,11 +735,9 @@ UPDATE English
 SET H1 = '' 
 WHERE 	H1 = '-----' OR 
 		H1 = '..' OR 
-        H1 = '(=RG)' OR 
         H1 = '' OR 
         H1 = '.' OR 
         H1 = '\'-----' OR 
-        H1 = '(RG)' OR 
         H1  LIKE '* Guardar las remartgas.%' OR
 		H1 = '___' OR 
         H1 = '----' OR
@@ -865,11 +747,9 @@ UPDATE English
 SET H2 = '' 
 WHERE 	H2 = '-----' OR 
 		H2 = '..' OR 
-        H2 = '(=RG)' OR 
         H2 = '' OR 
         H2 = '.' OR 
         H2 = '\'-----' OR 
-        H2 = '(RG)' OR 
         H2  LIKE '* Guardar las remartgas.%' OR
 		H2 = '___' OR 
         H2 = '----' OR
@@ -1165,6 +1045,46 @@ LEFT OUTER JOIN German ON
     German.J4 = English.J4
 
 WHERE German.nr IS NULL AND Italian.nr IS NULL AND French.nr IS NULL;
+
+UPDATE Alllanguages
+   SET Sursilvan_Search = Grischun_Search
+ WHERE Sursilvan_Search = '(RG)' OR Sursilvan_Search = '(=RG)';
+
+UPDATE Alllanguages
+   SET Sutsilvan_Search = Grischun_Search
+ WHERE Sutsilvan_Search = '(RG)' OR Sutsilvan_Search = '(=RG)';
+
+ UPDATE Alllanguages
+   SET Surmiran_Search = Grischun_Search
+ WHERE Surmiran_Search = '(RG)' OR Surmiran_Search = '(=RG)';
+
+ UPDATE Alllanguages
+   SET Puter_Search = Grischun_Search
+ WHERE Puter_Search = '(RG)' OR Puter_Search = '(=RG)';
+
+ UPDATE Alllanguages
+   SET Vallader_Search = Grischun_Search
+ WHERE Vallader_Search = '(RG)' OR Vallader_Search = '(=RG)';
+
+UPDATE Alllanguages
+   SET Sursilvan_Display = Grischun_Display
+ WHERE Sursilvan_Display = '(RG)' OR Sursilvan_Display = '(=RG)';
+
+UPDATE Alllanguages
+   SET Sutsilvan_Display = Grischun_Display
+ WHERE Sutsilvan_Display = '(RG)' OR Sutsilvan_Display = '(=RG)';
+
+ UPDATE Alllanguages
+   SET Surmiran_Display = Grischun_Display
+ WHERE Surmiran_Display = '(RG)' OR Surmiran_Display = '(=RG)';
+
+ UPDATE Alllanguages
+   SET Puter_Display = Grischun_Display
+ WHERE Puter_Display = '(RG)' OR Puter_Display = '(=RG)';
+
+ UPDATE Alllanguages
+   SET Vallader_Display = Grischun_Display
+ WHERE Vallader_Display = '(RG)' OR Vallader_Display = '(=RG)';
 
 DROP TABLE IF EXISTS German;
 DROP TABLE IF EXISTS French;
