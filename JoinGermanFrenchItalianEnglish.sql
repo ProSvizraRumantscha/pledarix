@@ -1086,6 +1086,103 @@ UPDATE Alllanguages
    SET Vallader_Display = Grischun_Display
  WHERE Vallader_Display = '(RG)' OR Vallader_Display = '(=RG)';
 
+
+-- Remove 0x0085 characters
+
+UPDATE Alllanguages
+SET Grischun_Display = REPLACE(Grischun_Display, '', '')
+WHERE 	Grischun_Display LIKE '%%';
+
+UPDATE Alllanguages
+SET Grischun_Search = REPLACE(Grischun_Search, '', '')
+WHERE 	Grischun_Search LIKE '%%';
+
+UPDATE Alllanguages
+SET Sursilvan_Display = REPLACE(Sursilvan_Display, '', '')
+WHERE   Sursilvan_Display LIKE '%%';
+
+UPDATE Alllanguages
+SET Sursilvan_Search = REPLACE(Sursilvan_Search, '', '')
+WHERE Sursilvan_Search LIKE '%%';
+
+UPDATE Alllanguages
+SET Sutsilvan_Display = REPLACE(Sutsilvan_Display, '', '')
+WHERE Sutsilvan_Display LIKE '%%';
+
+UPDATE Alllanguages
+SET Sutsilvan_Search = REPLACE(Sutsilvan_Search, '', '')
+WHERE Sutsilvan_Search LIKE '%%';
+
+UPDATE Alllanguages
+SET Surmiran_Display = REPLACE(Surmiran_Display, '', '')
+WHERE Surmiran_Display LIKE '%%';
+
+UPDATE Alllanguages
+SET Surmiran_Search = REPLACE(Surmiran_Search, '', '')
+WHERE Surmiran_Search LIKE '%%';
+
+UPDATE Alllanguages
+SET Puter_Display = REPLACE(Puter_Display, '', '')
+WHERE Puter_Display LIKE '%%';
+
+UPDATE Alllanguages
+SET Puter_Search = REPLACE(Puter_Search, '', '')
+WHERE Puter_Search LIKE '%%';
+
+UPDATE Alllanguages
+SET Vallader_Display = REPLACE(Vallader_Display, '', '')
+WHERE Vallader_Display LIKE '%%';
+
+UPDATE Alllanguages
+SET Vallader_Search = REPLACE(Vallader_Search, '', '')
+WHERE Vallader_Search LIKE '%%';
+
+UPDATE Alllanguages
+SET German_Display = REPLACE(German_Display, '', '')
+WHERE German_Display LIKE '%%';
+
+UPDATE Alllanguages
+SET German_Search = REPLACE(German_Search, '\', '')
+WHERE German_Search LIKE '%%';
+
+UPDATE Alllanguages
+SET English_Display = REPLACE(English_Display, '\', '')
+WHERE English_Display LIKE '%%';
+
+UPDATE Alllanguages
+SET English_Search = REPLACE(English_Search, '\', '')
+WHERE English_Search LIKE '%%';
+
+UPDATE Alllanguages
+SET Italian_Display = REPLACE(Italian_Display, '\', '')
+WHERE Italian_Display LIKE '%%';
+
+UPDATE Alllanguages
+SET Italian_Search = REPLACE(Italian_Search, '\', '')
+WHERE Italian_Search LIKE '%%';
+
+UPDATE Alllanguages
+SET French_Display = REPLACE(French_Display, '\', '')
+WHERE French_Display LIKE '%%';
+
+UPDATE Alllanguages
+SET French_Search = REPLACE(French_Search, '\', '')
+WHERE French_Search LIKE '%%';
+
+UPDATE Alllanguages
+SET Conjugation = REPLACE(Conjugation, '\', '')
+WHERE Conjugation LIKE '%%';
+UPDATE Alllanguages
+SET Lexical_Class_D = REPLACE(Lexical_Class_D, '\', '')
+WHERE Lexical_Class_D LIKE '%%';
+
+UPDATE Alllanguages
+SET Lexical_Class_R = REPLACE(Lexical_Class_R, '\', '')
+WHERE Lexical_Class_R LIKE '%%';
+
+
+-- Drop temporary tables
+
 DROP TABLE IF EXISTS German;
 DROP TABLE IF EXISTS French;
 DROP TABLE IF EXISTS Italian;
