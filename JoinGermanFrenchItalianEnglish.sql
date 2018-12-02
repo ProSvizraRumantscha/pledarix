@@ -11,6 +11,7 @@ CREATE TABLE German(
 	SELECT A1, A2, A3, B0, B1, B2, D1, D2, E1, E2, F1, F2, G1, G2, H1, H2, J4, nr 
     FROM meinpledari);
 
+
 UPDATE German 
 SET A1 = '' 
 WHERE 	A1 = '-----' OR 
@@ -1142,42 +1143,42 @@ SET German_Display = REPLACE(German_Display, '', '')
 WHERE German_Display LIKE '%%';
 
 UPDATE Alllanguages
-SET German_Search = REPLACE(German_Search, '\', '')
+SET German_Search = REPLACE(German_Search, '', '')
 WHERE German_Search LIKE '%%';
 
 UPDATE Alllanguages
-SET English_Display = REPLACE(English_Display, '\', '')
+SET English_Display = REPLACE(English_Display, '', '')
 WHERE English_Display LIKE '%%';
 
 UPDATE Alllanguages
-SET English_Search = REPLACE(English_Search, '\', '')
+SET English_Search = REPLACE(English_Search, '', '')
 WHERE English_Search LIKE '%%';
 
 UPDATE Alllanguages
-SET Italian_Display = REPLACE(Italian_Display, '\', '')
+SET Italian_Display = REPLACE(Italian_Display, '', '')
 WHERE Italian_Display LIKE '%%';
 
 UPDATE Alllanguages
-SET Italian_Search = REPLACE(Italian_Search, '\', '')
+SET Italian_Search = REPLACE(Italian_Search, '', '')
 WHERE Italian_Search LIKE '%%';
 
 UPDATE Alllanguages
-SET French_Display = REPLACE(French_Display, '\', '')
+SET French_Display = REPLACE(French_Display, '', '')
 WHERE French_Display LIKE '%%';
 
 UPDATE Alllanguages
-SET French_Search = REPLACE(French_Search, '\', '')
+SET French_Search = REPLACE(French_Search, '', '')
 WHERE French_Search LIKE '%%';
 
 UPDATE Alllanguages
-SET Conjugation = REPLACE(Conjugation, '\', '')
+SET Conjugation = REPLACE(Conjugation, '', '')
 WHERE Conjugation LIKE '%%';
 UPDATE Alllanguages
-SET Lexical_Class_D = REPLACE(Lexical_Class_D, '\', '')
+SET Lexical_Class_D = REPLACE(Lexical_Class_D, '', '')
 WHERE Lexical_Class_D LIKE '%%';
 
 UPDATE Alllanguages
-SET Lexical_Class_R = REPLACE(Lexical_Class_R, '\', '')
+SET Lexical_Class_R = REPLACE(Lexical_Class_R, '', '')
 WHERE Lexical_Class_R LIKE '%%';
 
 
