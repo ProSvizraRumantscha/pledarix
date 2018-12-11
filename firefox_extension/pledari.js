@@ -1,4 +1,4 @@
-const BACKEND_URL = "http://mypledari.ch/tooltipQuery.php";
+const BACKEND_URL = "https://mypledari.ch/tooltipQuery.php";
 const LRU_CACHE_SIZE = 1024;
 const DEBUG = false;
 
@@ -66,7 +66,7 @@ function getTranslate(lookupWord){
     translating = true; //about to translate, prevent sending multiple parallel requests
     logDebug("translating " + cacheKey);
     $.ajax({
-        url: BACKEND_URL, 
+        url: BACKEND_URL,
         data: {search: searchLang, display: displayLang, pled: lookupWord},
         success: function(lookupResult){
           renderLookupResult(lookupResult);
