@@ -140,12 +140,12 @@ $(function () {
             end;
 
         //Find the begin of the word (space)
-        while (i > 0 && data[i].match(/\w/)) { --i; };
+        while (i > 0 && data[i].match(/[\w\u00C0-\u00ff]+/)) { --i; };
         begin = i;
 
         //Find the end of the word
         i = offset;
-        while (i < data.length && data[i].match(/\w/)) { ++i; };
+        while (i < data.length && data[i].match(/[\w\u00C0-\u00ff]+/)) { ++i; };
         end = i;
 
         //Return the word under the mouse cursor
@@ -159,7 +159,6 @@ $(function () {
 
         //Hand the word to the translation function
         if (word !== "")
-            word = word.match(/\w+/)[0];
             getTranslate(word);
     });
 });
