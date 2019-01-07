@@ -1,6 +1,6 @@
-const BACKEND_URL = "http://localhost:8084/tooltipQuery.php";
+const BACKEND_URL = "https://mypledari.ch/tooltipQuery.php"; //publish_firefox_extension.sh will replace this line
 const LRU_CACHE_SIZE = 1024;
-const DEBUG = true;
+const DEBUG = false;
 
 // create tooltip Box and append to body
 var tooltipdiv = "<div class='tooltipdiv'><p class='tooltiptext'></p></div>";
