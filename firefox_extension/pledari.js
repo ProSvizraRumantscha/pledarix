@@ -63,6 +63,7 @@ function getTranslate(lookupWord){
       logDebug("prevent translating " + cacheKey);
       return;
     }
+    renderLookupResult(null); //hide tooltip while translating, we're hovering over a different word
     translating = true; //about to translate, prevent sending multiple parallel requests
     logDebug("translating " + cacheKey);
     $.ajax({
