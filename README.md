@@ -25,6 +25,7 @@ This repository includes...
 * the data source as sql exports from the original database at pledari.ch
 * the Chrome plugin
 * the query helpers (php) hosted at pledari.ch, which allow access to the database
+* as an alternative to the SQL backend, a dockerized environment based on Elasticsearch (see [README file](backend/README.md) in the backend subfolder) is provided. It makes use of Hunspell dictionaries so as to translate the stems of the words to be translated.
 
 # Todo
 
