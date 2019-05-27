@@ -8,9 +8,10 @@ export function initMenu() {
 }
 
 function _getMenuMarkup() {
+    const label = browser.i18n.getMessage("selectSearchDirection");
     return ""+
     "<div id='pledarix_menu_footer'><form>"+
-    "<label>Direcziun per la tschertga / Suchrichtung </label>"+
+    "<label>" + label + " </label>"+
     "<select name='search' id='search_dropdown'>"+
     languages.map(lang => "<option value='"+lang[0]+"'>"+lang[1]+"</option>").join('\n') +
     "</select> &gt; "+

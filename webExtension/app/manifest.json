@@ -14,5 +14,6 @@
       "js": ["scripts/content.js"],
       "css": ["scripts/content.css"]
     }
-  ]
+  ],
+  "default_locale": "rm"
 }
