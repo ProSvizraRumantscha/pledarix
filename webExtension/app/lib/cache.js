@@ -1,4 +1,4 @@
-import lru, {LRUMap} from 'lru_map';
+import { LRUMap } from 'lru_map';
 
 const LRU_CACHE_SIZE = 1024;
 

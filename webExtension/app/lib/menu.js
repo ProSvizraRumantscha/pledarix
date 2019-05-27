@@ -15,6 +15,13 @@ export function removeMenu() {
     $('#pledarix_menu_footer').remove();
 }
 
+export function getSelectedLanguages() {
+    return {
+        searchLang: $("#pledarix_search_dropdown").val(),
+        displayLang: $("#pledarix_display_dropdown").val(),
+    }
+}
+
 function _getMenuMarkup() {
     const label = browser.i18n.getMessage("selectSearchDirection");
     return ""+
