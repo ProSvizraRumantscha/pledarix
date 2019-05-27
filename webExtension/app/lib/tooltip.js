@@ -19,6 +19,10 @@ export function renderLookupResult(result) {
     }
 }
 
+export function setTooltipPosition(x, y) {
+    $("#pledarix_tooltip").css({'top': y + 20,'left': x });
+}
+
 function _getTooltipMarkup() {
     return "<div id='pledarix_tooltip'><p id='pledarix_tooltip_text'></p></div>";
 }
