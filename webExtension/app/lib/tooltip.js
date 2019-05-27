@@ -6,6 +6,10 @@ export function initTooltip() {
     }
 }
 
+export function removeTooltip() {
+    $('#pledarix_tooltip').remove();
+}
+
 function _getTooltipMarkup() {
     return "<div id='pledarix_tooltip'><p id='pledarix_tooltip_text'></p></div>";
 }
