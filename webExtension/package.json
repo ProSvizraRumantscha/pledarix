@@ -1,0 +1,26 @@
+{
+  "name": "pledarix",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "webextension-toolbox dev",
+    "build": "webextension-toolbox build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prosvizrarumantscha/pledarix.git"
+  },
+  "keywords": [
+    "rumantsch",
+    "pledari"
+  ],
+  "author": "Pro Svizra Rumantscha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Prosvizrarumantscha/pledarix/issues"
+  },
+  "homepage": "https://github.com/Prosvizrarumantscha/pledarix#readme",
+  "devDependencies": {
+    "webextension-toolbox": "^3.0.0"
+  }
+}
