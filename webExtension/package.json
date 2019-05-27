@@ -24,6 +24,7 @@
     "webextension-toolbox": "^3.0.0"
   },
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "lru_map": "^0.3.3"
   }
 }
