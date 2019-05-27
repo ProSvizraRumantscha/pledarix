@@ -22,6 +22,10 @@ export function getSelectedLanguages() {
     }
 }
 
+export function setSearchLanguage(language) {
+    $("#pledarix_search_dropdown").val(language);
+}
+
 function _getMenuMarkup() {
     const label = browser.i18n.getMessage("selectSearchDirection");
     return ""+

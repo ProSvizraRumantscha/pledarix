@@ -1,5 +1,6 @@
 import { setTooltipPosition } from "./tooltip";
 import {queryTerm} from "./queryTerm";
+import {detectLanguage} from "./languageDetection";
 
 var mouseX;
 var mouseY;
@@ -17,6 +18,8 @@ export function initMouseObserver() {
             console.log(word);
             queryTerm(word);
         }
+
+        detectLanguage();
     };
 }
 
