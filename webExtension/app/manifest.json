@@ -1,5 +1,11 @@
 {
   "manifest_version": 2,
+  "applications": {
+    "gecko": {
+      "id": "pledarix@rumantsch.ch",
+      "strict_min_version": "58.0"
+    }
+  },
   "icons": {
     "48": "icons/icon-48.png",
     "96": "icons/icon-96.png"
