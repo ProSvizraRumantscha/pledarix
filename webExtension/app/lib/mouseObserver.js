@@ -60,7 +60,7 @@ function _getWordUnderCursor(event) {
 
     //Find the begin of the word (space)
     while (i > 0 && data.charAt(i).match(/[\w\u00C0-\u00ff]+/)) { --i; };
-    begin = i;
+    begin = i + 1;
 
     //Find the end of the word
     i = offset;
