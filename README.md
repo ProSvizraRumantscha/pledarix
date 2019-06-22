@@ -21,14 +21,10 @@ The backend for the plugin is available on [GitHub](https://github.com/ProSvizra
 # Documentation / data
 
 This repository includes...
-* the data source as sql exports from the original database at pledari.ch
-* the browser plugin
-* as an alternative to the SQL backend, a dockerized environment based on Elasticsearch (see [README file](backend/README.md) in the backend subfolder) is provided. It makes use of Hunspell dictionaries so as to translate the stems of the words to be translated.
-
-# Todo
-
-- [ ] Get from a prototype to a beta version which can be installed without programmer knowledge
-- [ ] Add possibility to access the database behind [pledarigrond.ch](http://pledarigrond.ch) to extend the word source for Rumantsch Grischun
+* `/data`: the data source as sql exports from the original database at pledari.ch
+* `/webExtension`: the browser plugin
+* `/backend`: as an alternative to the SQL backend, a dockerized environment based on Elasticsearch (see [README file](backend/README.md) in the backend subfolder) is provided. It makes use of Hunspell dictionaries so as to translate the stems of the words to be translated.
+* `/sql_scripts`: Some queries used to manipulate the source data
 
 # Team
 
