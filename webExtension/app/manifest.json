@@ -21,5 +21,6 @@
       "css": ["scripts/content.css"]
     }
   ],
-  "default_locale": "rm"
+  "__firefox__default_locale": "rm",
+  "__chrome__default_locale": "de"
 }
