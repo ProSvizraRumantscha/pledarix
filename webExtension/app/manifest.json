@@ -1,5 +1,6 @@
 {
   "manifest_version": 2,
+  "description": "__MSG_extensionDescription__",
   "applications": {
     "gecko": {
       "id": "pledarix@rumantsch.ch",
