@@ -1,9 +1,12 @@
 import franc from "./franc-all";
 import {setSearchLanguage} from "./menu";
+import $ from "jquery";
 
 
 export function detectLanguage() {
-    const language = franc(document.body.textContent);
+    //exclude footer content for language detection
+    const footerContent = $('#pledarix_menu_footer').text();
+    const language = franc(document.body.textContent.replace(footerContent, ''));
 
     let textLanguage = 'grischun';
     switch (language) {
