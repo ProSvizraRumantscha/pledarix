@@ -37,7 +37,7 @@ export function queryTerm(lookupWord){
     console.log("translating " + cacheKey);
 
     let url = new URL(BACKEND_URL);
-    url.search = new URLSearchParams({search: languages.searchLang, display: languages.displayLang, pled: lookupWord});
+    url.search = new URLSearchParams({searchLanguage: languages.searchLang, displayLanguage: languages.displayLang, searchTerm: lookupWord});
 
     fetch(url)
         .then(res => res.json())
