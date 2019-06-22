@@ -59,12 +59,12 @@ function _getWordUnderCursor(event) {
         end;
 
     //Find the begin of the word (space)
-    while (i > 0 && data[i].match(/[\w\u00C0-\u00ff]+/)) { --i; };
+    while (i > 0 && data.charAt(i).match(/[\w\u00C0-\u00ff]+/)) { --i; };
     begin = i;
 
     //Find the end of the word
     i = offset;
-    while (i < data.length && data[i].match(/[\w\u00C0-\u00ff]+/)) { ++i; };
+    while (i < data.length && data.charAt(i).match(/[\w\u00C0-\u00ff]+/)) { ++i; };
     end = i;
 
     //Return the word under the mouse cursor
