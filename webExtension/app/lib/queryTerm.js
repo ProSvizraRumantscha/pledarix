@@ -2,7 +2,7 @@ import { renderLookupResult } from "./tooltip";
 import { getSelectedLanguages } from "./menu";
 import { generateCache } from "./cache";
 
-const BACKEND_URL = "https://mypledari.ch/tooltipQuery.php";
+const BACKEND_URL = "https://api.pledari.ch/index.php";
 
 let cache = generateCache();
 let translating = false;

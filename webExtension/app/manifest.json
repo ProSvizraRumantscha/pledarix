@@ -12,7 +12,7 @@
   },
   "permissions": [
     "webRequest",
-    "*://*.mypledari.ch/*"
+    "*://api.pledari.ch/*"
   ],
   "content_scripts": [
     {
