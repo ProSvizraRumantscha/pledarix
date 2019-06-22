@@ -2,5 +2,9 @@
   "selectSearchDirection": {
     "message": "Direcziun per la tschertga",
     "description": "Label for the bottom-page menu."
+  },
+  "extensionDescription": {
+    "message": "A browser extension which is translating words in Rumantsch when hovering with the mouse over the word.",
+    "description": "The description of the extension shown on the extensions page in the browser"
   }
 }
