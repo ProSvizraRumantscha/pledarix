@@ -2,7 +2,7 @@ import { renderLookupResult } from "./tooltip";
 import { getSelectedLanguages } from "./menu";
 import { generateCache } from "./cache";
 
-const BACKEND_URL = "https://mypledari.ch/tooltipQuery.php";
+const BACKEND_URL = "https://api.pledari.ch/index.php";
 
 let cache = generateCache();
 let translating = false;
@@ -37,7 +37,7 @@ export function queryTerm(lookupWord){
     console.log("translating " + cacheKey);
 
     let url = new URL(BACKEND_URL);
-    url.search = new URLSearchParams({search: languages.searchLang, display: languages.displayLang, pled: lookupWord});
+    url.search = new URLSearchParams({searchLanguage: languages.searchLang, displayLanguage: languages.displayLang, searchTerm: lookupWord});
 
     fetch(url)
         .then(res => res.json())
