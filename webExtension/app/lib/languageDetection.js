@@ -38,6 +38,7 @@ export function detectLanguage() {
             textLanguage = 'german';
             break;
     }
+    console.log("detected language: " + textLanguage);
 
     setSearchLanguage(textLanguage);
 }

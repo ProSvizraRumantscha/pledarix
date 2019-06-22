@@ -11,7 +11,6 @@ export function initMouseObserver() {
         mouseX = event.pageX;
         mouseY = event.pageY;
         
-        console.log("mouseMoved");
         if (withinFreezeBorder(mouseX,mouseY)) {
             console.log("within freeze border");
             return;
@@ -25,8 +24,6 @@ export function initMouseObserver() {
             console.log(word);
             queryTerm(word);
         }
-
-        detectLanguage();
     };
 }
 
@@ -36,8 +33,6 @@ function withinFreezeBorder(x,y) {
     var maxX = tooltipOffset.left + $("#pledarix_tooltip").width() + 5;
     var minY = tooltipOffset.top - 25
     var maxY = tooltipOffset.top + $("#pledarix_tooltip").height() + 5;
-    console.log("minX " + minX + " maxX " + maxX + " minY " + minY + " maxY " + maxY);
-    console.log("x " + x + " y " + y);
     return minX <= x && x <= maxX && minY <= y && y <= maxY;
 }
 
