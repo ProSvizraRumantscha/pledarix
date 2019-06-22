@@ -1,6 +1,7 @@
-import { setTooltipPosition } from "./tooltip";
+import { mouseMoved } from "./tooltip";
 import {queryTerm} from "./queryTerm";
 import {detectLanguage} from "./languageDetection";
+import $ from 'jquery';
 
 var mouseX;
 var mouseY;
@@ -9,7 +10,13 @@ export function initMouseObserver() {
     document.onmousemove = function(event) {
         mouseX = event.pageX;
         mouseY = event.pageY;
-        setTooltipPosition(mouseX, mouseY);
+        
+        console.log("mouseMoved");
+        if (withinFreezeBorder(mouseX,mouseY)) {
+            console.log("within freeze border");
+            return;
+        }
+        mouseMoved(mouseX, mouseY);
 
         const word = _getWordUnderCursor(event);
 
@@ -21,6 +28,17 @@ export function initMouseObserver() {
 
         detectLanguage();
     };
+}
+
+function withinFreezeBorder(x,y) {
+    var tooltipOffset = $("#pledarix_tooltip").offset();
+    var minX = tooltipOffset.left - 5;
+    var maxX = tooltipOffset.left + $("#pledarix_tooltip").width() + 5;
+    var minY = tooltipOffset.top - 25
+    var maxY = tooltipOffset.top + $("#pledarix_tooltip").height() + 5;
+    console.log("minX " + minX + " maxX " + maxX + " minY " + minY + " maxY " + maxY);
+    console.log("x " + x + " y " + y);
+    return minX <= x && x <= maxX && minY <= y && y <= maxY;
 }
 
 // Function for detecting the word underneath the mouse pointer

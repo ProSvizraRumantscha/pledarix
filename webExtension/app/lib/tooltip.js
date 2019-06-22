@@ -19,7 +19,7 @@ export function renderLookupResult(result) {
     }
 }
 
-export function setTooltipPosition(x, y) {
+export function mouseMoved(x, y) {
     $("#pledarix_tooltip").css({'top': y + 20,'left': x });
 }
 

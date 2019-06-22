@@ -20,14 +20,14 @@ export function queryTerm(lookupWord){
     let cacheKey = languages.searchLang + "." + languages.displayLang + "." + lookupWord;
     let lookupResult = cache.get(cacheKey);
     if (lookupResult) {
-        console.log("cache hit for " + cacheKey);
+        //console.log("cache hit for " + cacheKey);
         renderLookupResult(lookupResult);
         return;
     }
 
-    console.log("cache miss for " + cacheKey);
+    //console.log("cache miss for " + cacheKey);
     if (translating) {
-        console.log("prevent translating " + cacheKey);
+        //console.log("prevent translating " + cacheKey);
         return;
     }
 

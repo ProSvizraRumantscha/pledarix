@@ -1,3 +1,5 @@
 config.php
 .DS_Store
 .idea
+package-lock.json
+webExtension/package-lock.json
