@@ -1,5 +1,9 @@
 # Pledarix
 
+Pledarix es disponibel sco [supplement per Firefox](https://addons.mozilla.org/firefox/addon/pledarix/).
+
+Pledarix is now available as a [Firefox Add-On](https://addons.mozilla.org/firefox/addon/pledarix/).
+
 *Project started at the [Forum Helveticum Hackathon](https://hack.opendata.ch/event/22), 23./24.11.2018*
 
 Have a look at the [presentation](https://hack.opendata.ch/project/274/star)!
