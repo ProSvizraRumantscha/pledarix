@@ -4,7 +4,7 @@
     "description": "Label for the bottom-page menu."
   },
   "extensionDescription": {
-    "message": "Pledarix übersetzt das Wort einer Webseite, das sich gerade hinter dem Mauszeiger befindet, wahlweise in ein rätoromanisches Idiom, Französisch, Italienisch oder Englisch.",
+    "message": "Pledarix übersetzt das Wort einer Webseite, das sich gerade hinter dem Mauszeiger befindet.",
     "description": "The description of the extension shown on the extensions page in the browser"
   }
 }
