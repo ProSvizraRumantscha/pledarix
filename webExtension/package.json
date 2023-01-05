@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Prosvizrarumantscha/pledarix#readme",
   "devDependencies": {
-    "webextension-toolbox": "^3.0.0"
+    "webextension-toolbox": "^4.0.3"
   },
   "dependencies": {
     "jquery": "^3.5.0",
