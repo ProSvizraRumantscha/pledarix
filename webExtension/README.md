@@ -4,22 +4,22 @@ The pledarix WebExtension uses the [WebExtension Toolbox](https://github.com/web
 
 ## Development
 ```shell
-$ webextension-toolbox dev --help
-$ webextension-toolbox dev firefox
-$ webextension-toolbox dev chrome
-$ webextension-toolbox dev opera
-$ webextension-toolbox dev edge
+$ npm run dev -- --help
+$ npm run dev -- firefox
+$ npm run dev -- chrome
+$ npm run dev -- opera
+$ npm run dev -- edge
 ```
 
 Compiles the extension for development via webpack to `dist/<vendor>`. Watches all extension files and recompiles on demand.
 
 #Build
 ```shell
-$ webextension-toolbox build --help
-$ webextension-toolbox build firefox
-$ webextension-toolbox build chrome
-$ webextension-toolbox build opera
-$ webextension-toolbox build edge
+$ npm run build -- --help
+$ npm run build -- firefox
+$ npm run build -- chrome
+$ npm run build -- opera
+$ npm run build -- edge
 ```
 
 Compile extension via webpack to `dist/<vendor>`. Packs extension to `packages`.
