@@ -1,6 +1,6 @@
 {
   "name": "pledarix",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A browser extension which is translating words in Rumantsch when hovering with the mouse over the word.",
   "scripts": {
     "dev": "webextension-toolbox dev",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Prosvizrarumantscha/pledarix#readme",
   "devDependencies": {
-    "@webextension-toolbox/webextension-toolbox": "^6.1.0"
+    "@webextension-toolbox/webextension-toolbox": "^7.1.1"
   },
   "dependencies": {
     "jquery": "^3.7.0",
