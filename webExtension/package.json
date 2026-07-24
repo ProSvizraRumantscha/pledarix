@@ -3,8 +3,18 @@
   "version": "1.1.1",
   "description": "A browser extension which is translating words in Rumantsch when hovering with the mouse over the word.",
   "scripts": {
-    "dev": "webextension-toolbox dev",
-    "build": "webextension-toolbox build"
+    "dev:chrome": "wxt -b chrome",
+    "dev:firefox": "wxt -b firefox",
+    "dev:edge": "wxt -b edge",
+    "dev:opera": "wxt -b opera",
+    "build:chrome": "wxt build -b chrome",
+    "build:firefox": "wxt build -b firefox",
+    "build:edge": "wxt build -b edge",
+    "build:opera": "wxt build -b opera",
+    "zip:chrome": "wxt zip -b chrome",
+    "zip:firefox": "wxt zip -b firefox",
+    "zip:edge": "wxt zip -b edge",
+    "zip:opera": "wxt zip -b opera"
   },
   "repository": {
     "type": "git",
@@ -21,7 +31,8 @@
   },
   "homepage": "https://github.com/Prosvizrarumantscha/pledarix#readme",
   "devDependencies": {
-    "@webextension-toolbox/webextension-toolbox": "^7.1.1"
+    "typescript": "^7.0.2",
+    "wxt": "^0.20.27"
   },
   "dependencies": {
     "jquery": "^3.7.0",
@@ -29,11 +40,8 @@
   },
   "packageManager": "pnpm@10.12.4+sha256.cadfd9e6c9fcc2cb76fe7c0779a5250b632898aea5f53d833a73690c77a778d9",
   "pnpm": {
-    "overrides": {
-      "webpack": "5.97.1"
-    },
     "onlyBuiltDependencies": [
-      "@swc/core"
+      "esbuild"
     ]
   }
 }

@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import { browser } from '#imports';
 import { languages } from "./languages";
 
 export function initMenu() {

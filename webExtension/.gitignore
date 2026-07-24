@@ -1,8 +1,7 @@
 node_modules
-build
 npm-debug.log
 .env
 .DS_Store
 .idea
-dist/
-packages/
+.wxt
+.output
