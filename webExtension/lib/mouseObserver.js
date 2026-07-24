@@ -1,6 +1,5 @@
 import { mouseMoved } from "./tooltip";
 import {queryTerm} from "./queryTerm";
-import {detectLanguage} from "./languageDetection";
 
 var mouseX;
 var mouseY;

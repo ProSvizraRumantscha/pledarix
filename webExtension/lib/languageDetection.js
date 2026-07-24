@@ -1,45 +1,27 @@
-import franc from "./franc-all";
-import {setSearchLanguage} from "./menu";
+import { browser } from '#imports';
+import { setSearchLanguage } from "./menu";
 
-export function detectLanguage() {
+const LABEL_TO_LANGUAGE = {
+    'rm-sursilv': 'sursilvan',
+    'rm-sutsilv': 'sutsilvan',
+    'rm-surmiran': 'surmiran',
+    'rm-puter': 'puter',
+    'rm-vallader': 'vallader',
+    'rm-rumgr': 'grischun',
+    'de': 'german',
+    'fr': 'french',
+    'it': 'italian',
+    'en': 'english',
+};
+
+export async function detectLanguage() {
     //exclude footer content for language detection
     const footer = document.getElementById('pledarix_menu_footer');
     const footerContent = footer ? footer.textContent : '';
-    const language = franc(document.body.textContent.replace(footerContent, ''));
+    const text = document.body.textContent.replace(footerContent, '');
 
-    let textLanguage = 'grischun';
-    switch (language) {
-        case 'roh_rumgr':
-            textLanguage = 'grischun';
-            break;
-        case 'roh_sursilv':
-            textLanguage = 'sursilvan';
-            break;
-        case 'roh_sutsilv':
-            textLanguage = 'sutsilvan';
-            break;
-        case 'roh_surmiran':
-            textLanguage = 'surmiran';
-            break;
-        case 'roh_puter':
-            textLanguage = 'puter';
-            break;
-        case 'roh_vallader':
-            textLanguage = 'vallader';
-            break;
-        case 'eng':
-            textLanguage = 'english';
-            break;
-        case 'ita':
-            textLanguage = 'italian';
-            break;
-        case 'fra':
-            textLanguage = 'french';
-            break;
-        case 'deu':
-            textLanguage = 'german';
-            break;
-    }
+    const { label } = await browser.runtime.sendMessage({ type: 'classify-language', text });
+    const textLanguage = LABEL_TO_LANGUAGE[label] || 'grischun';
     console.log("detected language: " + textLanguage);
 
     setSearchLanguage(textLanguage);

@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@farscrl/romansh-idiom-classifier':
+        specifier: ^1.0.2
+        version: 1.0.2
       lru_map:
         specifier: ^0.4.1
         version: 0.4.1
@@ -236,6 +239,10 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@farscrl/romansh-idiom-classifier@1.0.2':
+    resolution: {integrity: sha512-OsNKa9Q4K/hg28ms83xHSZKEqWp/UHCsjrOaY6QzQuNT8FvJV9EDOVbPT8pe9tTNtS8QX2dmxviSR+GNEXDgVw==}
+    engines: {node: '>=22'}
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -2262,6 +2269,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.27.7':
     optional: true
+
+  '@farscrl/romansh-idiom-classifier@1.0.2': {}
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
