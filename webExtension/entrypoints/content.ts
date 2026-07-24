@@ -19,6 +19,13 @@ export default defineContentScript({
         removeTooltip();
       });
     }
-    document.body.addEventListener('DOMSubtreeModified', detectLanguage);
+    detectLanguage();
+
+    let debounceTimer: ReturnType<typeof setTimeout>;
+    const observer = new MutationObserver(() => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(detectLanguage, 500);
+    });
+    observer.observe(document.body, { childList: true, subtree: true, characterData: true });
   },
 });
