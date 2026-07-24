@@ -1,7 +1,6 @@
 import { mouseMoved } from "./tooltip";
 import {queryTerm} from "./queryTerm";
 import {detectLanguage} from "./languageDetection";
-import $ from 'jquery';
 
 var mouseX;
 var mouseY;
@@ -28,11 +27,15 @@ export function initMouseObserver() {
 }
 
 function withinFreezeBorder(x,y) {
-    var tooltipOffset = $("#pledarix_tooltip").offset();
-    var minX = tooltipOffset.left - 5;
-    var maxX = tooltipOffset.left + $("#pledarix_tooltip").width() + 5;
-    var minY = tooltipOffset.top - 25
-    var maxY = tooltipOffset.top + $("#pledarix_tooltip").height() + 5;
+    var tooltip = document.getElementById('pledarix_tooltip');
+    if (!tooltip) return false;
+    var rect = tooltip.getBoundingClientRect();
+    var left = rect.left + window.scrollX;
+    var top = rect.top + window.scrollY;
+    var minX = left - 5;
+    var maxX = left + rect.width + 5;
+    var minY = top - 25
+    var maxY = top + rect.height + 5;
     return minX <= x && x <= maxX && minY <= y && y <= maxY;
 }
 

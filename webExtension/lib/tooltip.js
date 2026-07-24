@@ -1,26 +1,29 @@
-import $ from 'jquery';
-
 export function initTooltip() {
-    if($('#pledarix_tooltip').length === 0) {
-        $('body').append(_getTooltipMarkup());
+    if (document.getElementById('pledarix_tooltip') === null) {
+        document.body.insertAdjacentHTML('beforeend', _getTooltipMarkup());
     }
 }
 
 export function removeTooltip() {
-    $('#pledarix_tooltip').remove();
+    document.getElementById('pledarix_tooltip')?.remove();
 }
 
 export function renderLookupResult(result) {
+    const tooltip = document.getElementById('pledarix_tooltip');
+    if (!tooltip) return;
     if (result && result.translation) {
-        $("#pledarix_tooltip").text(result.translation);
-        $("#pledarix_tooltip").show();
+        tooltip.textContent = result.translation;
+        tooltip.style.display = 'block';
     } else {
-        $("#pledarix_tooltip").hide();
+        tooltip.style.display = 'none';
     }
 }
 
 export function mouseMoved(x, y) {
-    $("#pledarix_tooltip").css({'top': y + 20,'left': x });
+    const tooltip = document.getElementById('pledarix_tooltip');
+    if (!tooltip) return;
+    tooltip.style.top = (y + 20) + 'px';
+    tooltip.style.left = x + 'px';
 }
 
 function _getTooltipMarkup() {

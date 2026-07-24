@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      jquery:
-        specifier: ^3.7.0
-        version: 3.7.1
       lru_map:
         specifier: ^0.4.1
         version: 0.4.1
@@ -1234,9 +1231,6 @@ packages:
   jiti@2.7.0:
     resolution: {integrity: sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ==}
     hasBin: true
-
-  jquery@3.7.1:
-    resolution: {integrity: sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==}
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -3164,8 +3158,6 @@ snapshots:
     optional: true
 
   jiti@2.7.0: {}
-
-  jquery@3.7.1: {}
 
   js-tokens@4.0.0: {}
 

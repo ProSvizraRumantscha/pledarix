@@ -1,30 +1,29 @@
-import $ from 'jquery';
 import { browser } from '#imports';
 import { languages } from "./languages";
 
 export function initMenu() {
-    if($('#pledarix_menu_footer').length === 0) {
-        $('body').append(_getMenuMarkup());
+    if (document.getElementById('pledarix_menu_footer') === null) {
+        document.body.insertAdjacentHTML('beforeend', _getMenuMarkup());
     }
 
     // set init value
-    $("#pledarix_search_dropdown").val('grischun');
-    $("#pledarix_display_dropdown").val('german');
+    document.getElementById('pledarix_search_dropdown').value = 'grischun';
+    document.getElementById('pledarix_display_dropdown').value = 'german';
 }
 
 export function removeMenu() {
-    $('#pledarix_menu_footer').remove();
+    document.getElementById('pledarix_menu_footer')?.remove();
 }
 
 export function getSelectedLanguages() {
     return {
-        searchLang: $("#pledarix_search_dropdown").val(),
-        displayLang: $("#pledarix_display_dropdown").val(),
+        searchLang: document.getElementById('pledarix_search_dropdown').value,
+        displayLang: document.getElementById('pledarix_display_dropdown').value,
     }
 }
 
 export function setSearchLanguage(language) {
-    $("#pledarix_search_dropdown").val(language);
+    document.getElementById('pledarix_search_dropdown').value = language;
 }
 
 function _getMenuMarkup() {
