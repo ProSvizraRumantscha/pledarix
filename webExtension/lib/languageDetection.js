@@ -17,8 +17,8 @@ const LABEL_TO_LANGUAGE = {
 export async function detectLanguage() {
     //exclude footer content for language detection
     const footer = document.getElementById('pledarix_menu_footer');
-    const footerContent = footer ? footer.textContent : '';
-    const text = document.body.textContent.replace(footerContent, '');
+    const footerContent = footer ? footer.innerText : '';
+    const text = document.body.innerText.replace(footerContent, '');
 
     const { label } = await browser.runtime.sendMessage({ type: 'classify-language', text });
     const textLanguage = LABEL_TO_LANGUAGE[label] || 'grischun';
